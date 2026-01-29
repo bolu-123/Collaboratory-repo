@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Integrated Service Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <div class="brand">
+        <h1 class="edit">CrystalNova</h1>
+        <p>Sign in to continue</p>
+      </div>
+
+      <form class="login-form" action="#" method="post">
+        <div class="social-row">
+          <button type="button" class="social google" aria-label="Sign in with Google">
+            <svg viewBox="0 0 533.5 544.3" class="icon"><path fill="#4285F4" d="M533.5 278.4c0-17.7-1.6-35-4.7-51.7H272v97.9h146.9c-6.3 34-25.3 62.9-54 82.2v68.3h87.3c51.1-47.1 80.3-116.3 80.3-196.7z"/></svg>
+            Google
+          </button>
+
+          <button type="button" class="social github" aria-label="Sign in with GitHub">
+            <svg viewBox="0 0 24 24" class="icon"><path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1-.01-1.96-3.2.7-3.88-1.54-3.88-1.54-.52-1.32-1.28-1.67-1.28-1.67-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.11-.75.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.19-3.11-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.19.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.21-1.5 3.18-1.19 3.18-1.19.63 1.6.23 2.76.11 3.05.74.81 1.19 1.85 1.19 3.11 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.07.78 2.16 0 1.57-.01 2.83-.01 3.21 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/></svg>
+            GitHub
+          </button>
+
+          <button type="button" class="social facebook" aria-label="Sign in with Facebook">
+            <svg viewBox="0 0 24 24" class="icon"><path fill="#1877F2" d="M22 12.1C22 6.6 17.5 2 12 2S2 6.6 2 12.1c0 4.9 3.5 8.97 8.1 9.86v-6.99H7.7v-2.9h2.4V9.8c0-2.4 1.43-3.7 3.62-3.7 1.05 0 2.15.18 2.15.18v2.36h-1.21c-1.2 0-1.57.75-1.57 1.52v1.84h2.67l-.43 2.9h-2.24V22c4.6-.9 8.1-5 8.1-9.9z"/></svg>
+            Facebook
+          </button>
+        </div>
+
+        <div class="divider"><span>or</span></div>
+
+        <label class="field">
+          <span class="label-text">Email</span>
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+
+        <label class="field">
+          <span class="label-text">Password</span>
+          <input type="password" name="password" placeholder="••••••••" required>
+        </label>
+
+        <div class="controls">
+          <label class="remember">
+            <input type="checkbox" name="remember"> Remember me
+          </label>
+          <a class="forgot" href="#">Forgot?</a>
+        </div>
+
+        <button type="submit" class="primary">Sign in</button>
+
+        <p class="signup">Don't have an account? <a href="#">Sign up</a></p>
+      </form>
+
+    </section>
+  </main>
+</body>
+</html>

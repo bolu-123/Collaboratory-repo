@@ -1,0 +1,100 @@
+:root{
+  --bg-1: #f6f8ff;
+  --card-bg: #ffffff;
+  --accent: rgb(146, 19, 184);
+  --muted: #6b7280;
+  --success: #10b981;
+  --radius: 12px;
+}
+*{box-sizing:border-box}
+html,body{
+  height:100%;
+}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  background-image: url('background1.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat; 
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:32px;
+  color:#111827;
+}
+.page{width:100%;max-width:980px}
+.card{
+  background-color: rgba(225,225,225,0.5);
+  border-radius:var(--radius);
+  box-shadow:0 10px 30px rgba(16,24,40,0.08);
+  display:flex;
+  gap:32px;
+  padding:32px;
+  align-items:center;
+}
+.edit{color: red;}
+.brand{flex:0 0 180px;text-align:center}
+.brand h1{margin:0;font-size:28px;color:var(--accent)}
+.brand p{margin-top:6px;color:var(--muted);font-size:14px}
+.login-form{flex:1;min-width:260px}
+.social-row{display:flex;gap:10px;margin-bottom:16px}
+.social{
+  flex:1;border:1px solid #e6e9f2;background:#fff;padding:10px 12px;border-radius:8px;display:inline-flex;gap:8px;align-items:center;justify-content:center;cursor:pointer;font-weight:600;color:#111827
+}
+.social .icon{width:18px;height:18px}
+.social.google{border-color:#e6eefc}
+.social.github{border-color:#eaeaea}
+.social.facebook{border-color:#e7f0ff}
+.divider{display:flex;align-items:center;margin:8px 0 16px}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:#eef2ff}
+.divider span{padding:0 10px;font-size:13px;color:var(--muted)}
+.field{display:block;margin-bottom:12px}
+.label-text{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+input[type="email"],input[type="password"]{
+  width:100%;padding:12px 14px;border-radius:8px;border:1px solid #e6e9f2;font-size:15px;outline:none;background:#fbfdff
+}
+input[type="email"]:focus,input[type="password"]:focus{box-shadow:0 0 0 4px rgba(79,70,229,0.06);border-color:var(--accent)}
+.controls{display:flex;align-items:center;justify-content:space-between;margin:10px 0 16px;font-size:14px}
+.remember input{margin-right:8px}
+.forgot{color:var(--accent);text-decoration:none}
+.primary{width:100%;background:linear-gradient(90deg,var(--accent),#7c3aed);color:#fff;padding:12px;border-radius:10px;border:0;font-weight:700;cursor:pointer;font-size:16px}
+.primary:active{transform:translateY(1px)}
+.signup{margin-top:14px;color:var(--muted);text-align:center}
+.signup a{color:var(--accent);text-decoration:none;font-weight:600}
+
+/* Responsive */
+@media (max-width:760px){
+  .card{
+    flex-direction:column;
+    padding:20px;
+    gap:18px;
+    align-items:stretch;
+  }
+  .brand{order:-1;flex:none;text-align:center}
+  .brand h1{font-size:24px}
+  .social-row{flex-direction:column;gap:8px}
+  .social{width:100%;padding:12px 14px}
+  .login-form{width:100%;min-width:0}
+  input[type="email"],input[type="password"]{padding:14px 16px;font-size:16px}
+  .primary{padding:12px;font-size:15px;border-radius:10px}
+  .divider::before,.divider::after{background:#e9eefc}
+  .page{padding:20px}
+}
+
+/* Extra small screens: phones in portrait */
+@media (max-width:480px){
+  body{padding:16px}
+  .page{max-width:420px}
+  .card{padding:16px;gap:12px}
+  .brand h1{font-size:20px}
+  .brand p{font-size:13px}
+  .social-row{gap:6px}
+  .social{padding:10px;font-size:14px}
+  .login-form{padding:0}
+  input[type="email"],input[type="password"]{
+    padding:14px 14px;font-size:15px;border-radius:8px
+  }
+  .controls{flex-direction:column;align-items:flex-start;gap:8px}
+  .primary{width:100%;padding:14px 12px;font-size:16px}
+  .signup{font-size:14px}
+}

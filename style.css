@@ -5,41 +5,41 @@
 }
 body {
     font-family: Arial, sans-serif;
-    background-size: cover;
     color: rgb(26, 19, 19);
 }
 header {
     display: flex;
-    position: fixed;
-    background-color: rgba(255, 255, 255, 0.7);
-    height: 5em;
+    /*background-color: rgba(255, 255, 255, 0.7);*/
+    height: 5vw;
     width: 100%;
 }
 #img {
-    width: 100vw;
-    margin: 1% 0% 0% 3%;
-    }
+    width: 4%;
+    height: 4vw;
+    border-radius: 50%;
+    margin: 0.5% 0% 0% 3%;
+    box-shadow: 2px 2px 5px lightblue;
+}
 ul {
     display: flex;
     align-items: end;
+    list-style: none;
 }
-#li1, #li2, #li3 ,#li4, #li5 {
+.li {
     padding: 0.8vw;
     justify-items: center;
     border-radius:5vw;
     background-color: #eee;
-    margin-right: 5vw;
+    margin-right:6vw;
     color: black;
     box-sizing: border-box;
-    border-bottom: 0.5vh solid blue;
-    list-style: none;
+    border-bottom: 0.2vw solid blue;
 }
 a {
     text-decoration: none;
 }
 #servicenav {
-    display: block;
-    position: absolute;
+    display: flex;
     margin: 14% 0 0 55.5%;
     background-color: #f9f6f6;
     padding: 1vw 1vw 1vw 1vw;
@@ -79,19 +79,20 @@ main {
     background-size: cover;
     height: 100vh;
     width: 100%;
-    z-index: 2;
 }
 #description {
-    width: 100%;
-    margin: 20vw 0% 10% 12%;
+    text-align: center;
+    margin: 15vw 0% 0% 12%;
+    padding-right: 30vw;
+    color: rgb(0, 0, 0);
+    z-index: 2;
 }
-#img_description {
-    margin: 13vw 15vw 0vw 0vw;
-}
-#hero_pic {
+#hero {
+    width: 60vw;
+    left: 60vw;
+    top: 25vh;
+    position: absolute;
     z-index: 1;
-    width: 35vw;
-    border-radius: 5%;
 }
 #hero_pic2 {
     width: 100%;
@@ -99,7 +100,7 @@ main {
 }
 #desktop {
     padding: 1vw 0 0 25vw;
-    display: flexbox;
+    display: flex;
 }
 #div2 {
     justify-items: center;
@@ -111,15 +112,47 @@ main {
 }
 #major {
     display: none;
-    }
+    position: absolute;
+    background: #fff;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    z-index: 1000;
+    border-radius: 10px;
+    padding: 0.5em 0;
+    margin-top: 1em;
+    left: 0;
+}
+#service_nav {
+    position: relative;
+}
+#service_nav:hover #major,
+#service_nav:focus-within #major {
+    display: block;
+}
+#major li {
+    padding: 0.7em 1.5em;
+    text-align: left;
+    background: none;
+    color: #222;
+    border: none;
+    margin: 0;
+    font-size: 1em;
+    border-radius: 0;
+    transition: background 0.2s;
+}
+#major li:hover {
+    background: #f0f0f0;
+    color: #0074d9;
+}
 #service1, #service2, #service3 {
     background-color: #ddd;
     color: black;
     height: 15vw;
     width: 15vw;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    align-content: center;
     border-style: inset;
     border-radius: 20%;
     box-shadow: 5px 5px 10px lightblue;
@@ -132,7 +165,6 @@ main {
     height: 20vw;
     background-color:white;
     text-align: center;
-    align-content: center;
 }
 
 #service1:hover, #service2:hover, #service3:hover {
@@ -140,11 +172,10 @@ main {
     border-style: outset;
     transform: translateY(3vw);
 }
-#li1:hover, #li2:hover, #li3:hover, #li4:hover, #li5:hover {
+.li:hover {
     border: none;
     box-shadow: none;
-    transform: translateY(1%);
-    transform: translateX(1%);
+    transform: translateY(1%) translateX(1%);
 }
 #services:hover #major {
     display: flex;
@@ -164,9 +195,142 @@ main {
 
 
 @media screen and (max-width: 768px) {
-        #desktop {
-        display: none;
-
+    header {
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+        padding: 2vw 2vw 0 2vw;
     }
-    
+    #img {
+        width: 12vw;
+        height: 12vw;
+        margin: 2vw 0 2vw 0;
+    }
+    ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding-left: 0;
+    }
+    .li {
+        padding: 2vw 4vw;
+        margin: 1vw 0;
+        width: 90vw;
+        font-size: 4vw;
+        margin-right: 0;
+        border-radius: 3vw;
+    }
+    #servicenav {
+        margin: 4vw 0 0 0;
+        padding: 2vw;
+        width: 90vw;
+        font-size: 4vw;
+        border-radius: 5vw;
+    }
+    .h {
+        margin: 2vw 0 0 0;
+        font-size: 6vw;
+    }
+    #div1 {
+        flex-direction: column;
+        height: auto;
+        padding: 2vw 0;
+    }
+    #description {
+        margin: 4vw 0 0 0;
+        padding: 0 2vw;
+        font-size: 4vw;
+    }
+    #hero {
+        width: 100vw;
+        left: 0;
+        top: 0;
+        position: static;
+        margin: 2vw 0;
+    }
+    #hero_pic2 {
+        width: 100vw;
+    }
+    #desktop {
+        display: none;
+    }
+    /* Keep submenu accessible on mobile but make it flow naturally */
+    #major {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        position: static;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+    }
+    #major li {
+        width: 100%;
+        padding: 1.2vw 4vw;
+        box-sizing: border-box;
+        background: #f6f6f6;
+        border-bottom: 1px solid #e3e3e3;
+    }
+    #major li a {
+        color: #222;
+    }
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+    #service1, #service2, #service3 {
+        width: 80vw;
+        height: 30vw;
+        margin: 2vw 0;
+        font-size: 5vw;
+    }
+    #service2, #service3 {
+        margin-left: 0;
+    }
+    #div3 {
+        height: auto;
+        padding: 4vw 0;
+        font-size: 4vw;
+    }
+    #about, #social {
+        margin: 4vw 0 4vw 0;
+        padding: 0 2vw;
+        font-size: 4vw;
+    }
+    .social {
+        width: 8vw;
+        margin: 2vw 2vw 2vw 0;
+    }
+    main {
+        padding: 2vw;
+    }
+    footer {
+        font-size: 4vw;
+        padding: 4vw 2vw;
+    }
+
+    /* Mobile navigation menu */
+    #mobile {
+        display: block;
+        width: 100%;
+        padding: 1.5vw 2vw;
+        background: #fff;
+    }
+    #mobile ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 1vw;
+    }
+    #mobile ul li a {
+        padding: 1vw 0;
+        color: #222;
+        display: block;
+    }
+    /* Hide the desktop nav on small screens and show a simple stacked mobile nav */
+    #desktop {
+        display: none;
+    }
 }
